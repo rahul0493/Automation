@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project COnnectServer with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Users/Rahuly/Desktop/changePassword.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="ConnectServer"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-collections4-4.1.jar commons-logging-1.2.jar jsch-0.1.42.jar commons-beanutils-1.9.3.jar commons-configuration-1.10.jar commons-lang-2.6.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="D:/3m/COnnectServer/COnnectServer/bin"/>
+            <zipfileset dir="D:\3m\COnnectServer\COnnectServer\lib" includes="commons-collections4-4.1.jar"/>
+            <zipfileset dir="D:\3m\COnnectServer\COnnectServer\lib" includes="commons-logging-1.2.jar"/>
+            <zipfileset dir="D:\3m\COnnectServer\COnnectServer\lib" includes="jsch-0.1.42.jar"/>
+            <zipfileset dir="D:\3m\COnnectServer\COnnectServer\lib" includes="commons-beanutils-1.9.3.jar"/>
+            <zipfileset dir="D:\3m\COnnectServer\COnnectServer\lib" includes="commons-configuration-1.10.jar"/>
+            <zipfileset dir="D:\3m\COnnectServer\COnnectServer\lib" includes="commons-lang-2.6.jar"/>
+        </jar>
+    </target>
+</project>
